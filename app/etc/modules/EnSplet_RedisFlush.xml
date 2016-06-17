@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <EnSplet_RedisFlush>
+            <active>true</active>
+            <codePool>local</codePool>
+        </EnSplet_RedisFlush>
+    </modules>
+</config>

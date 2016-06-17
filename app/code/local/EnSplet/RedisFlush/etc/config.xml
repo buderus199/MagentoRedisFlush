@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <EnSplet_RedisFlush>
+            <version>1.0.0</version>
+        </EnSplet_RedisFlush>
+    </modules>
+    <global>
+        <models>
+            <ensplet_redisflush>
+                <class>EnSplet_RedisFlush_Model</class>
+            </ensplet_redisflush>
+        </models>
+    </global>
+   <crontab>
+        <jobs>
+            <ensplet_redisflush>
+                <schedule>
+                    <cron_expr>0 2 */3 * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>ensplet_redisflush/cron::flushRedisCache</model>
+                </run>
+            </ensplet_redisflush>
+        </jobs>
+    </crontab>
+</config>
